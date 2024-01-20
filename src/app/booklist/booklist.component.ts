@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IBook } from './book.model';
+import { BookService } from './book.service';
 
 @Component({
   selector: 'app-booklist',
@@ -9,24 +10,15 @@ import { IBook } from './book.model';
 export class BooklistComponent {
   books: any;
 
-  constructor() {
-    this.books = [
-      {
-        "id": 1,
-        "title": "MacBeth",
-        "author": "William Shakespeare",
-        "genre": "Tragedy"
-      },
-      {
-        "id": 2,
-        "title": "The Inebriate",
-        "author": "Walt Whitman",
-        "genre": "Temperance"
-      }
-    ];
+  constructor(private bookSvc: BookService) {}
+
+  ngOnInit() {
+    this.bookSvc.getBooks().subscribe(books => {
+      this.books = books;
+    })
   }
 
-  getBooks() {
+  getBookList() {
     return this.books;
   }
 }
