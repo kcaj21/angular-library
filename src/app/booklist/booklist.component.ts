@@ -23,6 +23,12 @@ export class BooklistComponent {
     return this.books;
   }
 
+  deleteBook(id: number) {
+    this.bookSvc.delete(id).subscribe(() => this.bookSvc.getBooks().subscribe(books => {
+      this.books = books;
+    }))
+  }
+
 
 }
 

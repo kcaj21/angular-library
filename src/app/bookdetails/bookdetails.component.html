@@ -4,7 +4,6 @@
             <p>{{ book.author }}</p>
             <p>{{ book.genre }}</p> 
     </div>
-    <button>Delete</button>
-    <button>Update</button>
+    <button (click)="deleteClicked(book)">Delete</button>
+    <a [routerLink]="['/update', book.id]">Update</a>
 </div>
-

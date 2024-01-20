@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookdetailsComponent } from './bookdetails/bookdetails.component';
 import { AddbookformComponent } from './addbookform/addbookform.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { UpdatebookformComponent } from './updatebookform/updatebookform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BooklistComponent,
     BookdetailsComponent,
-    AddbookformComponent
+    AddbookformComponent,
+    NavbarComponent,
+    UpdatebookformComponent
     ],
   imports: [
     BrowserModule,

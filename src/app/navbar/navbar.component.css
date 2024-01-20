@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    border-bottom: 2px solid #818285;
+}
+
+.right {
+    margin-left: 10px;
+}

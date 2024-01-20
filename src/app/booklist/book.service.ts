@@ -14,9 +14,21 @@ export class BookService {
     return this.http.get<IBook[]>('api/book');
   }
 
+  getBook(id: number): Observable<IBook> {
+    return this.http.get<IBook>(`api/book/${id}`);
+ }
+
   addBook(book: IBook): Observable<IBook> {
     return this.http.post<IBook>('api/book', book);
  }
+
+ updateBook(book: IBook) {
+  return this.http.put('api/book', book);
+ }
+
+ delete(id: number): Observable<any> {
+  return this.http.delete<IBook>(`api/book?id=${id}`);
+}
 
 
 }

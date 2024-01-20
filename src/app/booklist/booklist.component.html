@@ -1,7 +1,10 @@
 <div class="booklist">
     <ul>
         <li class="book" *ngFor="let book of getBookList()">
-            <app-bookdetails [book]="book"></app-bookdetails>
+            <app-bookdetails
+             [book]="book"
+             (delete)="deleteBook(book.id)"
+             ></app-bookdetails>
         </li>      
     </ul>
 </div>
