@@ -1,0 +1,48 @@
+.book-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book {
+    padding: 20px 25px;
+    font-size: large;
+  }
+
+  .book-title {
+    font-weight: 600;
+  }
+
+  .genre {
+    font-style: italic;
+  }
+
+  button {
+    margin: 50px 10px;
+    height: 10%;
+    align-items: center;
+    background-color: #d4180b;
+    color: #FCF6F5;
+    font-weight: 800;
+    border-style: None;
+    border-radius: 6px;
+    font-size: 32px;
+    padding: 10px;
+    
+
+  }
+
+  .update {
+    margin: 50px 10px;
+    height: 10%;
+    padding: 10px;
+    align-items: center;
+    background-color: #4986b572;
+    color: #000000;
+    font-weight: 800;
+    border-style: None;
+    border-radius: 6px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+  }

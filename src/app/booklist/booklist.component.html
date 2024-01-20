@@ -1,6 +1,6 @@
-<div class="booklist">
-    <ul>
-        <li class="book" *ngFor="let book of getBookList()">
+<div class="container">
+    <ul class="books">
+        <li class="book-item" *ngFor="let book of getBookList()">
             <app-bookdetails
              [book]="book"
              (delete)="deleteBook(book.id)"

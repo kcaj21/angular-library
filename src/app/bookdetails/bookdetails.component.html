@@ -1,9 +1,11 @@
-<div class="booklist">
-    <div>
-            <p>{{ book.title }}</p>
-            <p>{{ book.author }}</p>
-            <p>{{ book.genre }}</p> 
+<div class="book-container"> 
+    <div class="book">
+        <div class="book-details">
+                <p class="book-title">{{ book.title }}</p>
+                <p> By {{ book.author }}</p>
+                <p class="genre">{{ book.genre }}</p> 
+        </div>
     </div>
+    <a class="update" [routerLink]="['/update', book.id]">Update</a>
     <button (click)="deleteClicked(book)">Delete</button>
-    <a [routerLink]="['/update', book.id]">Update</a>
-</div>
+</div> 
