@@ -9,6 +9,7 @@ import { BookService } from './book.service';
 })
 export class BooklistComponent {
   books: any;
+  newBook!: IBook;
 
   constructor(private bookSvc: BookService) {}
 
@@ -21,5 +22,7 @@ export class BooklistComponent {
   getBookList() {
     return this.books;
   }
+
+
 }
 

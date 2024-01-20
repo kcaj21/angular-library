@@ -1,9 +1,7 @@
 <div class="booklist">
     <ul>
         <li class="book" *ngFor="let book of getBookList()">
-            <p> {{ book.title }}</p>
-            <p> {{ book.author }}</p>
-            <p> {{ book.genre }}</p>
-        </li>
+            <app-bookdetails [book]="book"></app-bookdetails>
+        </li>      
     </ul>
 </div>
