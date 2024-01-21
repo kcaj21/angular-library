@@ -25,6 +25,12 @@ export class BooklistComponent {
         title: 'Gary Potter 2',
         author: 'Jk Rowlin',
         genre: 'fantasy'
+      },
+      {
+        id: 2,
+        title: 'Gary Potter 3',
+        author: 'Jk Rowlin',
+        genre: 'fantasy'
       }
     ];
   }

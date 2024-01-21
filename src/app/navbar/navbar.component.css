@@ -1,8 +1,25 @@
 .container {
+    position: sticky;
+    top: 0;
     display: flex;
     border-bottom: 2px solid #999;
     border-radius: 2px;
-    justify-content: center;
+    background: #a3a09e;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.banner {
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+.navlinks {
+    display: flex;
+    justify-content: space-between;
 }
 
 .right {
@@ -23,7 +40,14 @@ a {
     font-weight: 800;
     float: left;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 32px
+}
+
+img {
+    padding: 20px 20px;
+    margin-bottom: 5px;
+    border: transparent;
+    border-radius: 25px;
+    opacity: 0.4;
 }
