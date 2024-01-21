@@ -31,6 +31,18 @@ export class BooklistComponent {
     //     title: 'Gary Potter 3',
     //     author: 'Jk Rowlin',
     //     genre: 'fantasy'
+    //   },
+    //   {
+    //     id: 3,
+    //     title: 'Gary Potter 3',
+    //     author: 'Jk Rowlin',
+    //     genre: 'fantasy'
+    //   },
+    //   {
+    //     id: 4,
+    //     title: 'Gary Potter 3',
+    //     author: 'Jk Rowlin',
+    //     genre: 'fantasy'
     //   }
     // ];
   }

@@ -1,20 +1,18 @@
-<div>
+<div class="formcontainer">
     <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
-        <label>
-           Title:
-           <input name="title" ngModel required>
+        <label >
+           <input placeholder="Title" name="title" ngModel required>
         </label>
        
         <label>
-           Author:
-           <input name="author" ngModel required>
+           <input placeholder="Author" name="author" ngModel required>
         </label>
        
         <label>
-           Genre:
-           <input name="genre" ngModel required>
+           <input placeholder="Genre" name="genre" ngModel required>
         </label>
-       
+       <div class="buttoncontainer">
         <button type="submit">Submit</button>
+      </div>
        </form>
 </div>
