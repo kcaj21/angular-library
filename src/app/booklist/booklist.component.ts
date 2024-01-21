@@ -13,33 +13,33 @@ export class BooklistComponent {
 
   constructor(private bookSvc: BookService) {
 
-    this.books = [
-      {
-        id: 0,
-        title: 'Gary Potter',
-        author: 'Jk Rowlin',
-        genre: 'fantasy'
-      },
-      {
-        id: 1,
-        title: 'Gary Potter 2',
-        author: 'Jk Rowlin',
-        genre: 'fantasy'
-      },
-      {
-        id: 2,
-        title: 'Gary Potter 3',
-        author: 'Jk Rowlin',
-        genre: 'fantasy'
-      }
-    ];
+    // this.books = [
+    //   {
+    //     id: 0,
+    //     title: 'Gary Potter',
+    //     author: 'Jk Rowlin',
+    //     genre: 'fantasy'
+    //   },
+    //   {
+    //     id: 1,
+    //     title: 'Gary Potter 2',
+    //     author: 'Jk Rowlin',
+    //     genre: 'fantasy'
+    //   },
+    //   {
+    //     id: 2,
+    //     title: 'Gary Potter 3',
+    //     author: 'Jk Rowlin',
+    //     genre: 'fantasy'
+    //   }
+    // ];
   }
 
-  // ngOnInit() {
-  //   this.bookSvc.getBooks().subscribe(books => {
-  //     this.books = books;
-  //   })
-  // }
+  ngOnInit() {
+    this.bookSvc.getBooks().subscribe(books => {
+      this.books = books;
+    })
+  }
 
   getBookList() {
     return this.books;
