@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IBook } from './book.model';
 import { BookService } from './book.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-booklist',
@@ -9,42 +10,10 @@ import { BookService } from './book.service';
 })
 export class BooklistComponent {
   books: any;
-  newBook!: IBook;
+  // booksSubscription!: Subscription;
 
   constructor(private bookSvc: BookService) {
 
-    // this.books = [
-    //   {
-    //     id: 0,
-    //     title: 'Gary Potter',
-    //     author: 'Jk Rowlin',
-    //     genre: 'fantasy'
-    //   },
-    //   {
-    //     id: 1,
-    //     title: 'Gary Potter 2',
-    //     author: 'Jk Rowlin',
-    //     genre: 'fantasy'
-    //   },
-    //   {
-    //     id: 2,
-    //     title: 'Gary Potter 3',
-    //     author: 'Jk Rowlin',
-    //     genre: 'fantasy'
-    //   },
-    //   {
-    //     id: 3,
-    //     title: 'Gary Potter 3',
-    //     author: 'Jk Rowlin',
-    //     genre: 'fantasy'
-    //   },
-    //   {
-    //     id: 4,
-    //     title: 'Gary Potter 3',
-    //     author: 'Jk Rowlin',
-    //     genre: 'fantasy'
-    //   }
-    // ];
   }
 
   ngOnInit() {
@@ -53,15 +22,25 @@ export class BooklistComponent {
     })
   }
 
+  // ngOnInit() {
+  //   this.booksSubscription = this.bookSvc.getBooks().subscribe(books => {
+  //     this.books = books;
+  //   })
+  // }
+
   getBookList() {
     return this.books;
   }
 
   deleteBook(id: number) {
-    this.bookSvc.delete(id).subscribe(() => this.bookSvc.getBooks().subscribe(books => {
+    this.bookSvc.delete(id).subscribe(books => {
       this.books = books;
-    }))
+    })
   }
+
+  // ngOnDestroy() {
+  //   this.booksSubscription.unsubscribe()
+  // }
 
 
 }
